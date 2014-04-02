@@ -5,14 +5,24 @@
 
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#/customers">Customer</li>
+          <li><a href="#/orders">Orders</a></li>
+        </ul>
+      </nav>
+    </header>
     <div ng-view></div>
     <script src="scripts/angular-min.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/customersController.js"></script>
     <script src="app/controllers/ordersController.js"></script>
+    <script src="app/controllers/allOrdersController.js"></script>
     <script src="app/services/customersFactory.js"></script>
     <script src="app/services/values.js"></script>
+
 
   </body>
 </html>
