@@ -2,12 +2,14 @@
 
 Filter: <input type="text" ng-model="customerFilter.name" />
 
-<table>
+<table class="table table-striped">
   <tr>
     <th ng-click="doSort('name')">Name</th>
     <th ng-click="doSort('city')">City</th>
     <th ng-click="doSort('order')">Order Total</th>
     <th ng-click="doSort('joined')">Joined</th>
+    <th>Orders</th>
+    <th>&nbsp;</th>
   </tr>
 
   <tr ng-repeat="person in customers | filter:customerFilter | orderBy:sortBy:reverse">
@@ -16,6 +18,7 @@ Filter: <input type="text" ng-model="customerFilter.name" />
     <td>{{person.orderTotal | currency}}</td>
     <td>{{person.joined | date}}</td>
     <td><a href="#/orders/{{ person.id }}">View Orders</a></td>"
+    <td class="center"><span class="glyphicon glyphicon-remove delete" ng-click="deleteCustomer(person.id)"></span></td>
   </tr>
 </table>
 <br/>
