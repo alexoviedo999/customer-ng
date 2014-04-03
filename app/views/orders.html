@@ -1,6 +1,6 @@
 <h2>{{customer.name}}'s Orders</h2
 <br/>
-<table class="table table-striped">
+<table class="table">
   <tr>
     <th>Product</th>
     <th>Total</th>
@@ -8,6 +8,10 @@
   <tr ng-repeat="order in customer.orders">
     <td>{{ order.product }}</td>
     <td>{{ order.total | currency }}</td>
+  </tr>
+  <tr ng-class="totalType">
+    <td>&nbsp;</td>
+    <td>{{ orders.total | currency }}</td>
   </tr>
 
 </table>

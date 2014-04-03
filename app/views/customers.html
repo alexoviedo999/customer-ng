@@ -12,7 +12,7 @@ Filter: <input type="text" ng-model="customerFilter.name" />
     <th>&nbsp;</th>
   </tr>
 
-  <tr ng-repeat="person in customers | filter:customerFilter | orderBy:sortBy:reverse">
+  <tr ng-repeat="person in customers | filter:customerFilter | orderBy:sortBy:reverse"class="repeat-animation">
     <td>{{person.name | uppercase}}</td>
     <td>{{person.city}}</td>
     <td>{{person.orderTotal | currency}}</td>
